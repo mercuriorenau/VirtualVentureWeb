@@ -1,6 +1,7 @@
-# Archivos fuente duplicados (el sitio usa logo.jpg)
+# Archivos fuente / raster con fondo
 Logo Invertido*.jpg
 LogoVirtualVenture.png
+logo.jpg
 
 .DS_Store
 Thumbs.db

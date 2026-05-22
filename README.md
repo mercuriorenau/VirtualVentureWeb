@@ -5,7 +5,7 @@
 ```
 VIRTUAL VENTURE/
 ├── index.html          # Página principal (ensambla las secciones)
-├── logo.jpg            # Logo
+├── logo.png            # Logo (fondo transparente)
 ├── css/
 │   └── styles.css      # Estilos
 ├── js/
