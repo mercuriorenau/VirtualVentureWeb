@@ -1,0 +1,8 @@
+# Archivos fuente duplicados (el sitio usa logo.jpg)
+Logo Invertido*.jpg
+LogoVirtualVenture.png
+
+.DS_Store
+Thumbs.db
+.vscode/
+.cursor/
