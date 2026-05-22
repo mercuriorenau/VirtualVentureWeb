@@ -23,6 +23,27 @@ function initApp() {
   window.addEventListener('scroll', updateNav, { passive: true });
   updateNav();
 
+  const navAnchors = navLinks ? [...navLinks.querySelectorAll('a[href^="#"]')] : [];
+  const sections = [...document.querySelectorAll('section[id]')];
+
+  const updateActiveNav = () => {
+    if (!navAnchors.length || !sections.length) return;
+    const offset = nav.offsetHeight + 48;
+    let current = sections[0].id;
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top <= offset) {
+        current = section.id;
+      }
+    }
+    navAnchors.forEach((link) => {
+      const match = link.getAttribute('href') === `#${current}`;
+      link.classList.toggle('is-active', match);
+    });
+  };
+
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+  updateActiveNav();
+
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', () => {
       const open = navLinks.classList.toggle('is-open');
